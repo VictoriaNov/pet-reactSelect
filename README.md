@@ -1,2 +1,14 @@
 # reactSelect
 Select component in React using only TS and no additional React libraries
+
+# Technologies Stack
+TS, React
+
+# Instructions
+
+### `npm install` to download the dependencies
+
+### `npm start` to run the app
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+
