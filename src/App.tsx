@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Select from "./Select";
 
 function App() {
@@ -6,13 +7,14 @@ function App() {
     { label: "Second", value: 2 },
     { label: "Third", value: 3 },
     { label: "Fourth", value: 4 },
-    { label: "Fifth", value: 5 }
-
+    { label: "Fifth", value: 5 },
   ];
+
+  const [value, setValue] = useState<typeof options[0] | undefined>(options[0]);
 
   return (
     <>
-      <Select options={options} onChange={() => new Date()} />
+      <Select options={options} onChange={(o) => setValue(o)} value={value} />
     </>
   );
 }

@@ -1,23 +1,25 @@
 .container {
-position: relative;
-width: 20em;
-min-height: 1.5em;
-border: .05em solid #777;
-display: flex;
-align-items: center;
-gap: .5em;
-padding: .5em;
-border-radius: .25em;
-outline: none;
+  position: relative;
+  width: 20em;
+  min-height: 1.5em;
+  border: .05em solid #777;
+  display: flex;
+  align-items: center;
+  gap: .5em;
+  padding: .5em;
+  border-radius: .25em;
+  outline: none;
 }
 
 .container:focus {
   border-color: hsl(200, 100%, 50%);
-
 }
 
 .value {
   flex-grow: 1;
+  display: flex;
+  gap: .5em;
+  flex-wrap: wrap;
 }
 
 .clear-btn {
@@ -36,15 +38,15 @@ outline: none;
 }
 
 .divider {
-  background-color: 777;
+  background-color: #777;
   align-self: stretch;
-  width: 0.5em;
+  width: .05em;
 }
 
 .caret {
-  border: .25 solid transparent;
-  border-top-color: #777;
   translate: 0 25%;
+  border: .25em solid transparent;
+  border-top-color: #777;
 }
 
 .options {
@@ -53,8 +55,8 @@ outline: none;
   padding: 0;
   list-style: none;
   display: none;
-  max-width: 15em;
-  overflow: auto;
+  max-height: 15em;
+  overflow-y: auto;
   border: .05em solid #777;
   border-radius: .25em;
   width: 100%;
@@ -64,6 +66,20 @@ outline: none;
   z-index: 100;
 }
 
-.option.show {
+.options.show {
   display: block;
+}
+
+.option {
+  padding: .25em .5em;
+  cursor: pointer;
+}
+
+.option.selected {
+  background-color: hsl(200, 100%, 70%);
+}
+
+.option.highlighted {
+  background-color: hsl(200, 100%, 50%);
+  color: white
 }
