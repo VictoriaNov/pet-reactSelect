@@ -1,5 +1,5 @@
 # reactSelect
-Select component in React using only TS and no additional React libraries
+Select component in React with TS and no additional libraries
 
 # Technologies Stack
 TS, React
